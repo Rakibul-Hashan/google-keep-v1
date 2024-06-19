@@ -1,0 +1,56 @@
+/* 
+*** Tooltip CSS 
+*/
+[aria-label]:hover:after,
+[aria-label]:focus:after {
+  display: block;
+}
+[aria-label] {
+  position: relative;
+}
+
+[aria-label]:after {
+  content: attr(aria-label);
+  display: none;
+  position: absolute;
+  top: 110%;
+
+  right: 0;
+  z-index: 5000;
+  pointer-events: none;
+  padding: 8px 10px;
+  line-height: 15px;
+  white-space: nowrap;
+  text-decoration: none;
+  max-width: 150px;
+  text-indent: 0;
+
+  white-space: wrap;
+  word-wrap: break-word;
+  overflow: visible;
+  font-size: 12px;
+  font-weight: normal;
+  color: #fff;
+  text-shadow: 1px 0 1px #888;
+  background-color: #0a0a0ab5;
+  border-radius: 5px;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Rich text editor */
+
+/* src/index.css */
+.toolbar {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.toolbar button {
+  margin-right: 5px;
+}
+
+.editor {
+  min-height: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
